@@ -30,6 +30,11 @@ module.exports = function (config) {
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
+    coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, './coverage/ng-azure-devops'),
+      reports: ['html', 'lcovonly', 'text-summary', 'cobertura'],
+      fixWebpackSourcePaths: true
+    },
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/ng-azure-devops'),
       subdir: '.',
