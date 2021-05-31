@@ -39,4 +39,9 @@ steps:
     testResultsFiles: '**/TESTS-*.xml'
   displayName: 'Publish Test Results'
 
-  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'dist/ng-azure-devops'
+    ArtifactName: 'web-app'
+    publishLocation: 'Container'
+  displayName: 'Publish Artifacts'
